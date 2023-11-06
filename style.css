@@ -19,7 +19,7 @@ body {
     border-radius: 24px;
     margin: 52px auto;
     width: 90%;
-    height: 600px;
+    height: 620px;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./city-rain.jpg');
     background-size: cover;
 }
@@ -151,6 +151,10 @@ p {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
+    .container {
+        height: 700px;
+    }
+
     .weather-container {
         width: 85%;
     }

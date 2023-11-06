@@ -21,12 +21,12 @@
                 <form>
                     <label for="location-input">Select Location:</label>
                     <input type="text" id="location-input" placeholder="Enter city">
-                    <button type="submit">Get Weather</button>
+                    <button type="submit" id="search-btn">Get Weather</button>
                 </form>
                 <div class="location-container">
                     <p><span class="degrees">25</span>&deg;C&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-cloud"></i></p>
                     <h2 class="location">New York</h2>
-                    <p class="max-low-temp"><span class="current-hour">10:43</span> | H:<span class="temp-max">32&deg;&nbsp;&nbsp;&nbsp; L:<span class="temp-low">18&deg;</span></span></p>
+                    <p class="max-low-temp"><span class="current-hour">10:43</span> | H:<span class="temp-max">32</span>&deg;C&nbsp;&nbsp;&nbsp; L:<span class="temp-min">18</span>&deg;C</p>
                 </div>
             </div>
 
@@ -34,23 +34,23 @@
             <div class="right-container">
                 <div class="weather-details">
                     <p><i class="fa-solid fa-temperature-half"></i> Feels like:</p>
-                    <span class="feels-like">24&deg;C</span>
+                    <span><span class="feels-like">24</span>&deg;C</span>
                 </div>
                 <div class="horizontal-line"></div>
                 <div class="weather-details">
                     <p><i class="fa-solid fa-water"></i> Humidity:</p>
-                    <span class="humidity">65%</span>
+                    <span><span class="humidity">65</span>%</span>
                 </div>
                 <div class="horizontal-line"></div>
                 <div class="weather-details">
                     <p><i class="fa-solid fa-wind"></i> Wind speed</p>
-                    <span class="wind-speed">3.09 m/s</span>
+                    <span><span class="wind-speed">3.09</span> m/s</span>
                 </div>
             </div>
         </div>
 
     </div>
-    <script src="./script.js"></script>
+    <script src="./script.js" type="module"></script>
 </body>
 
 </html>

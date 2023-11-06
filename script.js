@@ -8,12 +8,20 @@ const minTemp = document.querySelector('.temp-min');
 const feelsLike = document.querySelector('.feels-like');
 const humidity = document.querySelector('.humidity');
 const windSpeed = document.querySelector('.wind-speed');
+const errorMessage = document.querySelector('.error-message');
 
 function displayWeather(event) {
     event.preventDefault();
     const cityValue = input.value;
-    console.log(cityValue);
     getWeatherData(cityValue);
+
+}
+
+function showErrorMessage() {
+    if(input.value === '') {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Please enter a city name';
+    }
 }
 
 async function getWeatherData(cityValue) {
@@ -32,6 +40,7 @@ async function getWeatherData(cityValue) {
         console.log(error);
     }
 }
+
 
 
 btn.addEventListener('click', displayWeather);

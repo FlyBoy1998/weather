@@ -5,11 +5,9 @@ const degrees = document.querySelector('.degrees');
 const cityName= document.querySelector('.location');
 const maxTemp = document.querySelector('.temp-max');
 const minTemp = document.querySelector('.temp-min');
-const currentHour = document.querySelector('.current-hour');
 const feelsLike = document.querySelector('.feels-like');
 const humidity = document.querySelector('.humidity');
 const windSpeed = document.querySelector('.wind-speed');
-const date = new Date();
 
 function displayWeather(event) {
     event.preventDefault();
@@ -26,9 +24,9 @@ async function getWeatherData(cityValue) {
         cityName.textContent = data.name;
         maxTemp.textContent = data.main.temp_max;
         minTemp.textContent = data.main.temp_min;
-        feelsLike.textContent = data.main.feels_like;
-        humidity.textContent = data.main.humidity;
-        windSpeed.textContent = data.wind.speed;
+        feelsLike.innerHTML = `${data.main.feels_like}&deg;C`;
+        humidity.innerHTML = `${data.main.humidity}%`;
+        windSpeed.innerHTML = `${data.wind.speed} m/s`;
         console.log(data);
     } catch (error) {
         console.log(error);

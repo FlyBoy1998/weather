@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="weather-container">
+            <!-- Input & Location Container -->
+            <div class="left-container">
+                <form>
+                    <label for="location-input">Select Location:</label>
+                    <input type="text" id="location-input" placeholder="Enter city">
+                    <button type="submit">Get Weather</button>
+                </form>
+                <div class="location-container">
+                    <p><span class="degrees">25</span>&deg;C&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-cloud"></i></p>
+                    <h2 class="location">New York</h2>
+                    <p class="max-low-temp"><span class="current-hour">10:43</span> | H:<span class="temp-max">32&deg;&nbsp;&nbsp;&nbsp; L:<span class="temp-low">18&deg;</span></span></p>
+                </div>
+            </div>
+
+            <!-- Weather Information Container -->
+            <div class="right-container">
+                <div class="weather-details">
+                    <p>Feels like:</p>
+                    <span>24&deg;C</span>
+                </div>
+                <div class="horizontal-line"></div>
+                <div class="weather-details">
+                    <p>Humidity:</p>
+                    <span>65%</span>
+                </div>
+                <div class="horizontal-line"></div>
+                <div class="weather-details">
+                    <p>Wind speed</p>
+                    <span>3.09 m/s</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script src="./script.js"></script>
 </body>
+
 </html>

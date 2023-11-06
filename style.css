@@ -77,6 +77,12 @@ input:focus {
     color: rgb(173, 173, 173);
 }
 
+.error-message {
+    font-size: 16px;
+    color: red;
+    display: none;
+}
+
 button {
     margin-top: 8px;
     width: 50%;

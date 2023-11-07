@@ -14,33 +14,32 @@ function displayWeather(event) {
     event.preventDefault();
     const cityValue = input.value;
     getWeatherData(cityValue);
-
-}
-
-function showErrorMessage() {
-    if(input.value === '') {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Please enter a city name';
-    }
 }
 
 async function getWeatherData(cityValue) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`);
         const data = await response.json();
-        degrees.textContent = data.main.temp;
-        cityName.textContent = data.name;
-        maxTemp.textContent = data.main.temp_max;
-        minTemp.textContent = data.main.temp_min;
-        feelsLike.innerHTML = `${data.main.feels_like}&deg;C`;
-        humidity.innerHTML = `${data.main.humidity}%`;
-        windSpeed.innerHTML = `${data.wind.speed} m/s`;
-        console.log(data);
+        if(input.value === '') {
+            errorMessage.classList.add('visible');
+            errorMessage.textContent = 'Please enter a city name';
+        } else if(response.status > 400) {
+            errorMessage.classList.add('visible');
+            errorMessage.textContent = 'Please enter a valid city name';
+        } else {
+            errorMessage.classList.remove('visible');
+            degrees.textContent = data.main.temp;
+            cityName.textContent = data.name;
+            maxTemp.textContent = data.main.temp_max;
+            minTemp.textContent = data.main.temp_min;
+            feelsLike.innerHTML = `${data.main.feels_like}&deg;C`;
+            humidity.innerHTML = `${data.main.humidity}%`;
+            windSpeed.innerHTML = `${data.wind.speed} m/s`;
+        }
+        
     } catch (error) {
         console.log(error);
     }
 }
-
-
 
 btn.addEventListener('click', displayWeather);

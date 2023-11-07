@@ -83,6 +83,10 @@ input:focus {
     display: none;
 }
 
+.visible {
+    display: block;
+}
+
 button {
     margin-top: 8px;
     width: 50%;
@@ -105,7 +109,7 @@ button:hover {
 }
 
 p {
-    font-size: 42px;
+    font-size: 36px;
 }
 
 .location {

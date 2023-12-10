@@ -39,8 +39,7 @@ h1 {
     color: #dbdbdb;
 }
 
-/* Input & Location Container Styling */
-
+/* INPUT & LOCATION CONTAINER */
 .left-container {
     display: flex;
     flex-direction: column;
@@ -121,13 +120,12 @@ p {
     font-size: 20px;
 }
 
-/* Weather Information Container Styling */
-
+/* WEATHER INFORMATION CONTAINER */
 .right-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     width: 50%;
 }
 
@@ -160,13 +158,21 @@ p {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 768px) {
+/* EXTRA LARGE SCREEN */
+@media screen and (max-width: 1200px) {
+    .weather-container {
+        width: 85%;
+    }
+}
+
+/* LARGE SCREEN */
+@media screen and (max-width: 992px) {
     .container {
-        height: 700px;
+        min-height: 700px;
     }
 
     .weather-container {
-        width: 85%;
+        width: 95%;
     }
 
     input,
@@ -183,12 +189,13 @@ p {
     }
 
     .weather-details {
-        width: 80%;
+        width: 100%;
         gap: 8px;
         justify-content: center;
     }
 }
 
+/* SMALL SCREEN */
 @media screen and (max-width: 576px) {
     .container {
         background-position: center;
